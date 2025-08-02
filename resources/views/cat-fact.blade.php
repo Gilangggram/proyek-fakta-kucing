@@ -49,9 +49,14 @@
 <body>
 
     <div class="container">
-        <h1>Fakta Unik Tentang Kucing 🐈</h1>
+        <h1>Fakta Kucing Hari Ini 🐈</h1>
         <p class="fact">"{{ $catFact }}"</p>
         <a href="/fakta-kucing" class="btn-refresh">Lihat Fakta Lain</a>
+        
+        {{-- TAMBAHKAN BARIS INI --}}
+        <footer style="margin-top: 20px; font-size: 0.8em; color: #7f8c8d;">
+            <p>Data dari Catfact Ninja API</p>
+        </footer>
     </div>
 
 </body>
