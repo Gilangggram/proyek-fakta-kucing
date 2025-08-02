@@ -26,7 +26,7 @@
             color: #2c3e50;
         }
         .fact {
-            font-size: 1.2rem;
+            font-size: 1.5rem; /* <--- UBAH NILAI INI */
             color: #34495e;
             line-height: 1.6;
             min-height: 80px;
