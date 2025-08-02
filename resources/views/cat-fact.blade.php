@@ -49,7 +49,7 @@
 <body>
 
     <div class="container">
-        <h1>Fakta Kucing Hari Ini 🐈</h1>
+        <h1>Fakta Unik Tentang Kucing 🐈</h1>
         <p class="fact">"{{ $catFact }}"</p>
         <a href="/fakta-kucing" class="btn-refresh">Lihat Fakta Lain</a>
     </div>
