@@ -57,7 +57,7 @@
     <a href="/fakta-kucing" class="btn-refresh">Lihat Fakta Lain</a>
 
     {{-- TAMBAHKAN TOMBOL BARU INI --}}
-    <button onclick="copyFact()" class="btn-copy">Salin Teks</button>
+    <button onclick="copyFact()" class="btn-copy">Copy Fact</button>
 
     <footer style="margin-top: 20px; font-size: 0.8em; color: #7f8c8d;">
         <p>Data dari Catfact Ninja API</p>
