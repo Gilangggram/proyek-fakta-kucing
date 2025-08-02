@@ -49,15 +49,56 @@
 <body>
 
     <div class="container">
-        <h1>Fakta Kucing Hari Ini 🐈</h1>
-        <p class="fact">"{{ $catFact }}"</p>
-        <a href="/fakta-kucing" class="btn-refresh">Lihat Fakta Lain</a>
-        
-        {{-- TAMBAHKAN BARIS INI --}}
-        <footer style="margin-top: 20px; font-size: 0.8em; color: #7f8c8d;">
-            <p>Data dari Catfact Ninja API</p>
-        </footer>
-    </div>
+    <h1>Fakta Kucing Hari Ini 🐈</h1>
+
+    {{-- Beri ID agar JavaScript bisa menemukannya --}}
+    <p id="catFactText" class="fact">"{{ $catFact }}"</p>
+
+    <a href="/fakta-kucing" class="btn-refresh">Lihat Fakta Lain</a>
+
+    {{-- TAMBAHKAN TOMBOL BARU INI --}}
+    <button onclick="copyFact()" class="btn-copy">Salin Teks</button>
+
+    <footer style="margin-top: 20px; font-size: 0.8em; color: #7f8c8d;">
+        <p>Data dari Catfact Ninja API</p>
+    </footer>
+</div>
+
+{{-- TAMBAHKAN SCRIPT INI DI BAWAH --}}
+<script>
+function copyFact() {
+    // Ambil teks dari elemen paragraf
+    const factText = document.getElementById('catFactText').innerText;
+    
+    // Gunakan Clipboard API untuk menyalin teks
+    navigator.clipboard.writeText(factText).then(function() {
+        // Beri notifikasi bahwa teks berhasil disalin
+        alert('Fakta berhasil disalin!');
+    }, function(err) {
+        // Tangani error jika gagal
+        alert('Gagal menyalin fakta: ', err);
+    });
+}
+</script>
+
+{{-- Tambahkan sedikit style untuk tombol baru --}}
+<style>
+.btn-copy {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #27ae60;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.btn-copy:hover {
+    background-color: #229954;
+}
+</style>
 
 </body>
 </html>
